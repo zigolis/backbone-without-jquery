@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Backbone</title>
+    </head>
+    <body>
+        <h1>Backbone without jQuery!</h1>
+
+        <ul id="person">
+            <script type="text/html" id="tmp">
+                <% this.collection.each(function(model) { %>
+                    <li>
+                        <%= model.get('id') %> - <%= model.get('name') %>
+                    </li>
+                <% }); %>
+            </script><!-- #tmp -->
+        </ul>
+
+        <script src="vendor/underscore.js"></script>
+        <script src="vendor/backbone.js"></script>
+        <script src="vendor/backbone.nativeview.js"></script>
+        <script src="vendor/backbone.nativeajax.js"></script>
+        <script src="assets/js/model/Model.js"></script>
+        <script src="assets/js/collection/Collection.js"></script>
+        <script src="assets/js/view/View.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
